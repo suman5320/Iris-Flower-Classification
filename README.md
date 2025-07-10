@@ -5,11 +5,12 @@ This project performs classification of the famous Iris flower dataset using Sup
 # Project Structure
 
 
+
 ---
 
 ## 📊 Dataset
 
-
+- **Source**: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/iris)
 - **Features**:
   - Sepal Length
   - Sepal Width
@@ -17,19 +18,21 @@ This project performs classification of the famous Iris flower dataset using Sup
   - Petal Width
 - **Target**: Species (`setosa`, `versicolor`, `virginica`)
 
-# Key Steps
+---
 
-# Exploratory Data Analysis (EDA)
+## 🧪 Key Steps
+
+### 🔍 Exploratory Data Analysis (EDA)
 - Data shape, types, and missing values
 - Univariate plots (histogram, boxplots)
 - Bivariate plots (pairplot, scatterplot)
 - Correlation heatmap and feature relationships
 - Class-wise statistical summary
 
-# Feature Engineering
+### 📐 Feature Engineering
 - Dropped `sepal_width` (low correlation & less useful in separation)
 
-# Model: Support Vector Machine (SVC)
+### ⚙️ Model: Support Vector Machine (SVC)
 - Kernel tried: `linear`, `rbf`, `poly`
 - Used `GridSearchCV` for tuning `C`, `gamma`, `kernel`
 - Best performance achieved with:
@@ -37,14 +40,14 @@ This project performs classification of the famous Iris flower dataset using Sup
   - `C=1`
   - `gamma='scale'`
 
-# Evaluation
+### 📈 Evaluation
 - Confusion Matrix
 - Classification Report (Precision, Recall, F1-score)
 - Accuracy on test set: **94%**
 
 ---
 
-# Result & Observations
+## ✅ Result & Observations
 
 - The **linear kernel** outperformed RBF and polynomial kernels.
 - `C=1` generalized better than `C=10`, even though GridSearchCV selected `C=10` due to slightly higher CV score.
@@ -53,7 +56,13 @@ This project performs classification of the famous Iris flower dataset using Sup
 
 ---
 
-# Model Saving & Loading
+## 💾 Model Saving & Loading
+
+Model is saved using `joblib`:
+```python
+from joblib import dump, load
+dump(model, 'svm_model.joblib')
+model = load('svm_model.joblib')
 
 Model is saved using `joblib`:
 
