@@ -63,9 +63,3 @@ Model is saved using `joblib`:
 from joblib import dump, load
 dump(model, 'svm_model.joblib')
 model = load('svm_model.joblib')
-
-Model is saved using `joblib`:
-
-from joblib import dump, load
-dump(model, 'svm_model.joblib')
-model = load('svm_model.joblib')
