@@ -2,3 +2,6 @@ fastapi
 uvicorn
 joblib
 numpy
+scikit-learn
+streamlit
+requests
