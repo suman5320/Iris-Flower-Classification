@@ -4,7 +4,7 @@ This project performs classification of the famous Iris flower dataset using Sup
 
 # Project Structure
 
-- **Live Demo**:[](https://iris-flower-classificationgit-hv98qvgw44zehzm2pnn8ck.streamlit.app/)
+- **Live Demo**:[iris-flower-classifier](https://iris-flower-classificationgit-hv98qvgw44zehzm2pnn8ck.streamlit.app/)
 
 ---
 
